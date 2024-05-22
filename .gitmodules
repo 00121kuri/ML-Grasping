@@ -1,0 +1,6 @@
+[submodule "python/ml-agents"]
+	path = python/ml-agents
+	url = https://github.com/Unity-Technologies/ml-agents.git
+[submodule "unity-project"]
+	path = unity-project
+	url = https://github.com/00121kuri/ML-Grasping-Unity.git

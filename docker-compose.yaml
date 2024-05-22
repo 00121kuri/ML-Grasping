@@ -1,0 +1,18 @@
+services:
+  python:
+    build: ./python
+    container_name: python
+    restart: always
+    tty: true
+    ports:
+      - "5004:5004"
+      - "6006:6006"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [ gpu ]
+    volumes:
+      - ./python/app/results:/app/results
+    # command: nvidia-smi
