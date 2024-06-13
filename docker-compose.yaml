@@ -15,4 +15,3 @@ services:
               capabilities: [ gpu ]
     volumes:
       - ./python/app/results:/app/results
-    # command: nvidia-smi
