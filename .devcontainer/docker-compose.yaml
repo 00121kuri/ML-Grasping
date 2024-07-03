@@ -1,6 +1,6 @@
 services:
   python:
-    build: ./python
+    build: ../python
     container_name: python
     restart: always
     tty: true
@@ -14,4 +14,4 @@ services:
             - driver: nvidia
               capabilities: [ gpu ]
     volumes:
-      - ./python/app/results:/app/results
+      - ../app/results:/app/results

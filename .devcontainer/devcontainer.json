@@ -1,0 +1,6 @@
+{
+    "name": "ML-Grasping",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "python",
+    "workspaceFolder": "/app"
+}
