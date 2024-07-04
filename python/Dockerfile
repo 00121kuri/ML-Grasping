@@ -23,6 +23,6 @@ RUN apt-get update && apt-get install -y tzdata
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-
 RUN chmod +x run.sh
-# CMD ["./run.sh"]
+RUN chmod +x tensorboard.sh
+ENTRYPOINT ["./tensorboard.sh"]
