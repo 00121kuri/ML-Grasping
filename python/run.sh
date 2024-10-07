@@ -11,6 +11,6 @@ else
     echo "Starting new training session"
 fi
 
-# mlagents-learn ./config/one-hand.yaml --run-id=$run_id --env=unity-build/unity-build --no-graphics --num-envs=4 &
-mlagents-learn ./config/one-hand.yaml --run-id=$run_id $resume_option &
+mlagents-learn ./config/one-hand.yaml --run-id=$run_id $resume_option --env=build-app/ml-grasping --no-graphics --num-envs=4 &
+# mlagents-learn ./config/one-hand.yaml --run-id=$run_id $resume_option &
 wait
