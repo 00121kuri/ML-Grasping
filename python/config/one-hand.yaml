@@ -25,3 +25,44 @@ behaviors:
     time_horizon: 512
     summary_freq: 1000
     threaded: true
+environment_parameters:
+  frames_per_episode:
+    curriculum:
+    - name: Lesson0
+      completion_criteria:
+        measure: progress
+        behavior: HandBehavior
+        threshold: 0.3
+      value: 1
+    - name: Lesson1
+      completion_criteria:
+        measure: progress
+        behavior: HandBehavior
+        threshold: 0.6
+      value: 10
+    - name: Lesson2
+      completion_criteria:
+        measure: progress
+        behavior: HandBehavior
+        threshold: 1.0
+      value: 100
+  steps_per_one_frame:
+    curriculum:
+    - name: Lesson0
+      completion_criteria:
+        measure: progress
+        behavior: HandBehavior
+        threshold: 0.3
+      value: 100
+    - name: Lesson1
+      completion_criteria:
+        measure: progress
+        behavior: HandBehavior
+        threshold: 0.6
+      value: 10
+    - name: Lesson2
+      completion_criteria:
+        measure: progress
+        behavior: HandBehavior
+        threshold: 1.0
+      value: 1
