@@ -26,6 +26,8 @@ behaviors:
     summary_freq: 1000
     threaded: true
 environment_parameters:
+  weight_distance: 1.0
+  weight_rotation: 0.5
   frames_per_episode:
     curriculum:
     - name: Lesson0
