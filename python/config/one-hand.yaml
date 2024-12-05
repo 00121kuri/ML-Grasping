@@ -29,6 +29,7 @@ environment_parameters:
   weight_distance: 1.0
   weight_rotation: 0.5
   weight_input: 0.5
+  weight_contactPoint: 1.0
   frames_per_episode:
     curriculum:
     - name: Lesson0
