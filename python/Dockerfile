@@ -15,13 +15,13 @@ RUN pip install --upgrade pip
 RUN pip install -e ./ml-agents/ml-agents-envs \
     ./ml-agents/ml-agents
 
-COPY . /app/
-
 # Set the timezone to Tokyo
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y tzdata
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+COPY . /app/
 
 RUN chmod +x run.sh
 RUN chmod +x tensorboard.sh
