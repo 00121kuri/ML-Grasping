@@ -11,6 +11,7 @@ fi
 
 echo "Using run_id: $run_id"
 
-mlagents-learn ./config/one-hand.yaml --run-id=$run_id --env=build-app/ml-grasping --no-graphics --num-envs=4 &
+# mlagents-learn ./config/one-hand.yaml --run-id=$run_id --env=build-app/ml-grasping --no-graphics --num-envs=4 &
+mlagents-learn ./config/one-hand-one-frame.yaml --run-id=$run_id --env=build-app/ml-grasping --no-graphics --num-envs=4 &
 # mlagents-learn ./config/one-hand.yaml --run-id=$run_id &
 wait
