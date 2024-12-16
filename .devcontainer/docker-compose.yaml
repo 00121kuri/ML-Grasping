@@ -15,3 +15,14 @@ services:
               capabilities: [ gpu ]
     volumes:
       - ../app/results:/app/results
+  mongo:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - ../app/db:/data/db
+      - ../app/configdb:/data/configdb
